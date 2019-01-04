@@ -22,27 +22,17 @@ from googletrans import Translator
 import youtube_dl
 #import pyimgflip
 
-cl = LineClient(authToken="EAY6yG5AWCejfkATjcOe.+r+jAIdxZWQoBO38ex8YVG.XEdXqbLr/uT1NzrvWwz7NEtsKTL5Gt6e2bvAYacktZU=")
+cl = LineClient(authToken="")
 cl.log("Auth Token : " + str(cl.authToken))
 channel = LineChannel(cl)
 cl.log("Channel Access Token : " + str(channel.channelAccessToken))
 
-ki = LineClient(authToken="EAMVCZbTiFHlCpR5ix95.8OY1iJbE2cs3otqwBUM9rq.265F2SZm5F22AG6T5IxyL4cCW0uVYKLacwdzAv8nRdw=")
+ki = LineClient(authToken="")
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki,ki.server.CHANNEL_ID['LINE_TIMELINE'])
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
-kk = LineClient(authToken="EAsCu0pmXEBM3C4QTd5b.x6JXUNwTo2ABeWsGFXEkYW.MuBtAiirsdOyOmVilQsq4hEieQuXS1cvs4bYST/TwIE=")
-kk.log("Auth Token : " + str(kk.authToken))
-channel2 = LineChannel(kk,kk.server.CHANNEL_ID['LINE_TIMELINE'])
-kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
-
-kc = LineClient(authToken="EAnSVp5bMmJeEmJ12sXf.iXDW3NqeZe2QwsaB0p/2tW.PRbS7DgoNZYLWbxo+zkQ/cRcw+cYDsE44AgJhvO0pPM=")
-kc.log("Auth Token : " + str(kc.authToken))
-channel3 = LineChannel(kc,kc.server.CHANNEL_ID['LINE_TIMELINE'])
-kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
-
-sw = LineClient(authToken="EA3ldEcadjbvBBi8r987.ysELs5+0aaJPhSRVRuIgzW.aJaS/DruALMYUFAfR/R7taepEbxVm9pmQANtM+mdvZg=")
+sw = LineClient(authToken="")
 sw.log("Auth Token : " + str(sw.authToken))
 channel4 = LineChannel(sw,sw.server.CHANNEL_ID['LINE_TIMELINE'])
 sw.log("Channel Access Token : " + str(channel4.channelAccessToken))
@@ -52,19 +42,17 @@ print ("\nBOT MULAI BERJALAN......")
 
 poll = LinePoll(cl)
 call = cl
-creator = ["ufd1fc96a20d7cf0a8e6e8dfc117f32be"]
-owner = ["ufd1fc96a20d7cf0a8e6e8dfc117f32be"]
-admin = ["ufd1fc96a20d7cf0a8e6e8dfc117f32be"]
-staff = ["ufd1fc96a20d7cf0a8e6e8dfc117f32be"]
+creator = ["u954d9f74bc255dad64dc89bf1601469c"]
+owner = ["u954d9f74bc255dad64dc89bf1601469c"]
+admin = ["u954d9f74bc255dad64dc89bf1601469c"]
+staff = ["u954d9f74bc255dad64dc89bf1601469c"]
 lineProfile = cl.getProfile()
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
-Bmid = kk.getProfile().mid
-Cmid = kc.getProfile().mid
 Zmid = sw.getProfile().mid
-KAC = [cl,ki,kk,kc]
-ABC = [ki,kk,kc]
-Bots = [mid,Amid,Bmid,Cmid,Zmid]
+KAC = [cl,ki,sw]
+ABC = [cl,ki,sw]
+Bots = [mid,Amid,Zmid]
 Saints = admin + staff
 
 protectqr = []
@@ -81,8 +69,6 @@ msg_dict = {}
 msg_dict1 = {}
 
 responsename1 = ki.getProfile().displayName
-responsename2 = kk.getProfile().displayName
-responsename3 = kc.getProfile().displayName
 
 settings = {
     "Picture":False,
